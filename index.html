@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mo App</title>
+</head>
+<body id="subject">
+    <header>
+        <div class="nav">
+            <div class="judul">
+                <img src="logo.png">
+                <h1>Mo App</h1>
+            </div>
+            <ul class="nav-items">
+                <button onclick="dropFunction()" class="button">Menu</button>
+            </ul>
+        </div>
+    </header>
+<main>
+    <div class= "addContainer">
+        <h1>Add Task</h1>
+        <p>Task Done : {{completedItems}}</p>
+        <div>
+            <div class="mainB">
+                <button id="newB" @click="showForm=!showForm">+</button>
+                <button id="clearB" @click="clearForm">CLEAR</button>
+            </div>
+            <div class="inputData" v-show="showForm">
+                <div class="inputContainer">
+                    <form @submit.prevent="submitForm">
+                        <h3>Add New Task</h3>
+                        <input type="text" name="title" placeholder="Title">
+                        <input type="text" name="desc" placeholder="Desc">
+                        <input id="submitB" type="submit" value="Add">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="listContainer">
+        <div v-for="item in items" class="box" :class="{completed : item.state}">
+            <div class="boxT">
+                <h2>{{item.title}}</h2>
+                <h5>{{item.desc}}</h5>
+                <h6>DONE
+                    <input type="checkbox" :checked="item.state" @change="item.state=!item.state">
+                </h6>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <p id="foot">&copy2021 - 2021 Rasyad Akmal Risqullah</p>
+</footer>
+
+<script src="https://unpkg.com/vue@next"></script>
+<script>
+    Vue.createApp ({
+        data() {
+            return{
+                showForm: false,
+                items: []
+            }
+        },
+        methods: {
+            submitForm() {
+                let title = event.target.elements.title.value
+                let desc = event.target.elements.desc.value
+
+                this.items.push ({
+                    title: title,
+                    desc: desc,
+                    state: false
+                })
+
+                event.target.elements.title.value = ''
+                event.target.elements.desc.value = ''
+                this.showForm = false
+            },
+            clearForm: function(event) {
+                 this.items.splice(this.event);
+            },
+            clearForm: function(event) {
+                 this.items.splice(this.event);
+            }
+        },
+
+        computed: {
+            completedItems() {
+                return this.items.filter((item)=>item.state == true).length
+            }
+        }
+    }).mount('#subject')
+</script>
+</body>
+</html>
