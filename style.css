@@ -1,0 +1,218 @@
+* {
+	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(102, 76, 47);
+    position: relative;
+    margin-top: 0px;
+    padding: 20px;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+}
+
+.nav-items button {
+    border-radius: 20px;
+	border: 1px solid #FF4B2B;
+	background-color: #FF4B2B;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+    margin-left: 5px;
+	padding: 15px 25px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+.judul {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.judul h1 {
+    color: #FFFFFF;
+    margin-left: 10px;
+    font-size: 40px;
+}
+
+.judul img {
+    width: 60px;
+    height: 60px;
+}
+
+.nav ul{
+    display : flex;
+    margin-right: 50px;
+}
+
+body {
+    font-family: sans-serif;
+    width: 100%;
+    background-color: rgb(255, 228, 154);
+    display: inline;
+}
+
+main {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.addContainer {
+    padding: 35px;
+    border: 3px rgb(102, 76, 47);
+    background-color: #fff;
+	border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+	position: absolute;
+	overflow: hidden;
+	width: 350px;
+	max-width: 100%;
+    max-height: 550px;
+    margin-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.addContainer h1 {
+    margin-bottom: 7px;
+}
+
+main #newB {
+	border-radius: 70px;
+	border: 1px solid rgb(102, 76, 47);
+    background-color: rgb(255, 255, 255);
+	color: #000000;
+	font-size: 28px;
+	font-weight: bold;
+    margin-left: 5px;
+	padding: 5px 10px;
+	transition: transform 80ms ease-in;
+}
+
+main #clearB {
+	border-radius: 20px;
+	border: 1px solid #FF4B2B;
+	background-color: #FF4B2B;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+    margin-left: 5px;
+	padding: 15px 25px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+#newB:active {
+	transform: scale(0.95);
+}
+
+#clearB:active {
+	transform: scale(0.95);
+}
+
+form {
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding-top: 40px;
+	height: 100%;
+	text-align: center;
+}
+
+.mainB {
+    display: flex;
+    align-items: center;
+    margin-top: 35px;
+    margin-bottom: 30px;
+}
+
+.inputContainer input{
+    background-color: #eee;
+    border: none;
+    padding: 10px;
+    margin: 8px 0;
+    width: fit-content;
+}
+
+#submitB {
+    width: 50px;
+}
+
+.inputContainer {
+    background-color: #fff;
+	border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+	position: relative;
+	overflow: hidden;
+	width: 300px;
+	max-width: 100%;
+    min-height: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+main div {
+    margin-bottom: 30px;
+}
+
+.listContainer {
+    flex-grow: 1;
+}
+
+.box {
+    padding: 15px;
+    background-color: rgb(102, 76, 47);
+    border-radius: 20px;
+    margin-left: 400px;
+    color: #FFFFFF;
+    width: 65%;
+}
+
+.boxT h6 {
+    margin-top: 20px;
+    color: black;
+    padding: 5px;
+    width: fit-content;
+    background-color: #FFFFFF;
+}
+
+.boxT h5 {
+    margin-top: 10px;
+}
+
+.completed {
+    background-color: rgb(105, 209, 105);
+}
+
+footer {
+    background-color: rgb(102, 76, 47);
+    padding-left: 50px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    color: rgb(255, 255, 255);
+}
