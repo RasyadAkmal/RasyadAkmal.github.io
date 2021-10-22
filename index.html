@@ -13,7 +13,17 @@
                 <h1>Mo App</h1>
             </div>
             <ul class="nav-items">
-                <button onclick="dropFunction()" class="button">Menu</button>
+                <div class="dropDown">
+                    <button @click="showMenu=!showMenu" class="button">Menu</button>
+                    <div v-show="showMenu">
+                        <div class="menuContainer">
+                            <div class="dropList">
+                                <li href="index2.html">Profile</li>
+                                <li href="index3.html">Log Out</li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </ul>
         </div>
     </header>
@@ -39,7 +49,8 @@
         </div>
     </div>
 
-    <div class="listContainer">
+    <div class="listContainerTodo">
+        <h1>To Do</h1>
         <div v-for="item in items" class="box" :class="{completed : item.state}">
             <div class="boxT">
                 <h2>{{item.title}}</h2>
@@ -49,6 +60,10 @@
                 </h6>
             </div>
         </div>
+    </div>
+
+    <div class="listContainerFinish">
+
     </div>
 </main>
 <footer>
@@ -61,6 +76,7 @@
         data() {
             return{
                 showForm: false,
+                showMenu: false,
                 items: []
             }
         },
