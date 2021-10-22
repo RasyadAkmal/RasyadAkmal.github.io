@@ -11,7 +11,7 @@
     background-color: rgb(102, 76, 47);
     position: relative;
     margin-top: 0px;
-    padding: 20px;
+    padding: 10px;
 }
 
 .nav-items {
@@ -24,13 +24,37 @@
 	border: 1px solid #FF4B2B;
 	background-color: #FF4B2B;
 	color: #FFFFFF;
-	font-size: 12px;
+	font-size: 10px;
 	font-weight: bold;
-    margin-left: 5px;
-	padding: 15px 25px;
+	padding: 10px 15px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	transition: transform 80ms ease-in;
+}
+
+.dropDown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menuContainer {
+    position: absolute;
+    padding: 15px;
+    width: fit-content;
+    background-color: #FFFFFF;
+    margin-top: 13px;
+}
+
+.dropList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.dropList li {
+    list-style: none;
+    padding: 10px;
 }
 
 .judul {
@@ -42,12 +66,12 @@
 .judul h1 {
     color: #FFFFFF;
     margin-left: 10px;
-    font-size: 40px;
+    font-size: 20px;
 }
 
 .judul img {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
 }
 
 .nav ul{
@@ -80,7 +104,7 @@ main {
 			0 10px 10px rgba(0,0,0,0.22);
 	position: absolute;
 	overflow: hidden;
-	width: 350px;
+	width: 300px;
 	max-width: 100%;
     max-height: 550px;
     margin-bottom: 70px;
@@ -91,6 +115,7 @@ main {
 
 .addContainer h1 {
     margin-bottom: 7px;
+    font-size: 25px;
 }
 
 main #newB {
@@ -110,10 +135,10 @@ main #clearB {
 	border: 1px solid #FF4B2B;
 	background-color: #FF4B2B;
 	color: #FFFFFF;
-	font-size: 12px;
+	font-size: 10px;
 	font-weight: bold;
     margin-left: 5px;
-	padding: 15px 25px;
+	padding: 10px 15px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	transition: transform 80ms ease-in;
@@ -141,8 +166,8 @@ form {
 .mainB {
     display: flex;
     align-items: center;
-    margin-top: 35px;
-    margin-bottom: 30px;
+    margin-top: 25px;
+    margin-bottom: 15px;
 }
 
 .inputContainer input{
@@ -176,29 +201,49 @@ main div {
     margin-bottom: 30px;
 }
 
-.listContainer {
+.listContainerTodo {
     flex-grow: 1;
+    margin-left: 350px;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 250px;
+    background-color: rgb(102, 76, 47);
+    opacity: 75%;
+}
+
+.listContainerTodo h1 {
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: #FFFFFF;
 }
 
 .box {
     padding: 15px;
-    background-color: rgb(102, 76, 47);
+    background-color: rgb(255, 255, 255);
     border-radius: 20px;
-    margin-left: 400px;
-    color: #FFFFFF;
-    width: 65%;
+    color: #000000;
+    width: 100%;
+}
+
+.boxT {
+    margin-bottom: 0px;
 }
 
 .boxT h6 {
-    margin-top: 20px;
-    color: black;
-    padding: 5px;
+    margin-left: 110px;
+    color: rgb(255, 255, 255);
+    padding: 10px;
     width: fit-content;
-    background-color: #FFFFFF;
+    background-color: rgb(102, 76, 47);
+    border-radius: 10px;
 }
 
 .boxT h5 {
     margin-top: 10px;
+}
+
+.listContainerFinish {
+    flex-grow: 1;
 }
 
 .completed {
@@ -214,5 +259,8 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0px;
+}
+
+footer p {
     color: rgb(255, 255, 255);
 }
